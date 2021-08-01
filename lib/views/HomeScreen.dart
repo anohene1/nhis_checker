@@ -17,7 +17,7 @@ class _HomeState extends State<Home> {
   }
 
   Future sendUssd(
-      {@required String actionId, String cardNumber}) async =>
+      {@required String? actionId, String? cardNumber}) async =>
       await methodChannel.invokeMethod(
           "hoverStartTransaction", {"action_id": actionId, "number": cardNumber});
 
