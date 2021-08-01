@@ -17,9 +17,9 @@ class _HomeState extends State<Home> {
   }
 
   Future sendUssd(
-      {@required String actionId, String licenseNumber}) async =>
+      {@required String actionId, String cardNumber}) async =>
       await methodChannel.invokeMethod(
-          "hoverStartTransaction", {"action_id": actionId, "number": licenseNumber});
+          "hoverStartTransaction", {"action_id": actionId, "number": cardNumber});
 
 
   @override
@@ -47,9 +47,9 @@ class _HomeState extends State<Home> {
               cursorColor: Colors.white,
               style: TextStyle(color: Colors.white),
               decoration: InputDecoration(
-                  labelText: 'Enter car license number',
+                  labelText: 'Enter membership number',
                   labelStyle: TextStyle(color: Colors.white24),
-                  hintText: 'eg: AS 45 21',
+                  hintText: 'eg: 1687513',
                   hintStyle: TextStyle(color: Colors.white24),
                   enabledBorder: UnderlineInputBorder(
                       borderSide: BorderSide(color: Colors.white24),
@@ -69,7 +69,7 @@ class _HomeState extends State<Home> {
                 width: 200,
                 child: Center(
                     child: Text(
-                      'Check Insurance',
+                      'Check Validity',
                       style: TextStyle(color: Colors.white, fontSize: 20),
                     )),
                 decoration: BoxDecoration(
@@ -81,9 +81,9 @@ class _HomeState extends State<Home> {
               ),
               onTap: () {
                 if (_controller.text.isEmpty) {
-                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Enter car license number')));
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Enter membership number')));
                 } else {
-                  sendUssd(actionId: '26293b6d', licenseNumber: _controller.text);
+                  sendUssd(actionId: '2894c732', cardNumber: _controller.text);
                   _controller.clear();
                 }
               },

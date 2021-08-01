@@ -1,6 +1,14 @@
-# insurance
+# NHIS Checker
+NHIS Checker is an Android application that lets a user type an NHIS membership/card number as an input to show the insurance details of that membership/card number.
 
-A new Flutter project.
+## Note
+- This application is only available on the Android operating system.
+- The client device must have a Ghanaian SIM card installed.
+
+## Screenshots
+| [!Screenshot1]() | [!Screenshot1]() |
+| ----------- | ----------- |
+| [!Screenshot1]() | [!Screenshot1]() |
 
 ## Getting Started
 

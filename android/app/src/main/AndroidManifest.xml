@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.insurance">
+    package="com.anosoft.nhis_checker">
    <application
         android:label="Car Insurance Checker"
         android:icon="@mipmap/ic_launcher">
@@ -39,6 +39,6 @@
             android:value="2" />
        <meta-data
            android:name="com.hover.ApiKey"
-           android:value="38f7ddc9aa414ef50867e7f4add373c1"/>
+           android:value="53217866b6427d7160562a1b451615df"/>
     </application>
 </manifest>

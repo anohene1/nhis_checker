@@ -1,4 +1,4 @@
-package com.example.insurance;
+package com.anosoft.nhis_checker;
 import io.flutter.embedding.engine.FlutterEngine;
 import io.flutter.plugin.common.MethodChannel;
 import androidx.annotation.NonNull;
@@ -33,7 +33,7 @@ public class MainActivity extends FlutterActivity {
 
                                 Intent i = new HoverParameters.Builder(this)
                                         .request(action_id)
-                                        .extra("licenseNumber", number) // Only if your action has variables
+                                        .extra("cardNumber", number) // Only if your action has variables
                                         .setHeader("Getting Insurance Data")
                                         .initialProcessingMessage("Please wait...")
                                         .buildIntent();
